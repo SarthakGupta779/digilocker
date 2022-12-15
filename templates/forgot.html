@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\static\style.css" />
+    <title>forgot Password</title>
+  </head>
+  <body>
+    {% for message in messages %}
+    <div
+      class="alert alert-{{message.tags}} alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Message:</strong> {{message}}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+    <div class="container container1">
+      <h1>Forgot Password</h1>
+      <input class="form__input" type="text" placeholder="Email ID" />
+      <div class="btn">
+        <button class="btn1 form__button">Send OTP</button>
+        <button class="btn2 form__button">Cancel</button>
+      </div>
+      <p class="form__text">
+        <a class="form__link" href="./" id="linkLogin"
+          >Already have an account? Sign in</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

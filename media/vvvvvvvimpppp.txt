@@ -1,0 +1,9 @@
+dbms 
+os
+oops  imp
+networking
+dbms
+dsa 
+coa 
+
+

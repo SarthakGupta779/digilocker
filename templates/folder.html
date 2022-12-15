@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\static\style1.css" />
+    <title>File upload</title>
+  </head>
+  <body>
+    {% for message in messages %}
+    <div
+      class="alert alert-{{message.tags}} alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Message:</strong> {{message}}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %} {% if user.is_authenticated %}
+    <h1>Hello {{name}}</h1>
+    <h3>You have successfully logged into your account!</h3>
+    <button class="btn" type="submit"><a href="/signout">Logout</a></button>
+    {% else %}
+    {% endif %}
+    <form name="form" Method="post" action="" enctype="multipart/form-data">
+      {% csrf_token %}
+        <div class="file-upload-wrapper" data-text="Select your file!">
+        <input name="document" type="file" class="file-upload-field" value="">
+        <button type="submit">Save file</button
+        </div>
+
+
+
+    {% comment %} <input type="file" name="name_attribute" id="file"> {% endcomment %}
+    {% comment %} <button type="file upload"><a href=""></a></button> {% endcomment %}
+    </form>
+
+
+  </body>
+</html>

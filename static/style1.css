@@ -1,0 +1,29 @@
+body{
+    display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  font-size: 20px;
+  background: url(./download.jfif);
+  background-size: cover;
+
+}
+h1{
+  margin-top: -17%;
+  font-size:82px;
+
+}
+alert.alert{
+    margin: top 0;
+    
+}
+
+h3{
+  margin-left: -410px;
+  margin-bottom: -3%;
+  font-size: xxx-large;
+}
+.btn{
+  margin-bottom: auto;
+  border-radius: 5px;
+}
